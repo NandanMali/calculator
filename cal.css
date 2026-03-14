@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#contain{
+    
+    align-items: center;
+}
+#output{
+    border: 5px solid black;
+    height: 150px;
+    margin-bottom: 5%;
+    font-size: xx-large;
+    font-weight: calc();
+}
+#rows{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+button{
+    width: 75%;
+    border-radius: 100%;
+}
+p{
+    font-size: 400%;
+    font-weight: bolder;
+}
+p a{
+    text-decoration: none;
+    text-decoration-line: none;
+}
