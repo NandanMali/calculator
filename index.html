@@ -5,12 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calculator</title>
 
-<link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="cal.css">
-
-<script src="jquery-4.0.0.js"></script>
-<script src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
-<script src="cal.js"></script>
 
 </head>
 
@@ -18,37 +13,40 @@
 
 <div class="calculator">
 
-<input type="text" id="output" class="form-control" readonly>
+<input type="text" id="display" disabled>
 
-<div class="row">
-<button onclick="cal(7)">7</button>
-<button onclick="cal(8)">8</button>
-<button onclick="cal(9)">9</button>
-<button onclick="cal('/')">/</button>
+<div class="buttons">
+
+<button onclick="clearDisplay()">AC</button>
+<button onclick="append('%')">%</button>
+<button onclick="append('/')">/</button>
+<button onclick="removeLast()">⌫</button>
+
+<button onclick="append('7')">7</button>
+<button onclick="append('8')">8</button>
+<button onclick="append('9')">9</button>
+<button onclick="append('*')">*</button>
+
+<button onclick="append('4')">4</button>
+<button onclick="append('5')">5</button>
+<button onclick="append('6')">6</button>
+<button onclick="append('-')">-</button>
+
+<button onclick="append('1')">1</button>
+<button onclick="append('2')">2</button>
+<button onclick="append('3')">3</button>
+<button onclick="append('+')">+</button>
+
+<button onclick="append('0')">0</button>
+<button onclick="append('00')">00</button>
+<button onclick="append('.')">.</button>
+<button onclick="calculate()">=</button>
+
 </div>
 
-<div class="row">
-<button onclick="cal(4)">4</button>
-<button onclick="cal(5)">5</button>
-<button onclick="cal(6)">6</button>
-<button onclick="cal('*')">*</button>
 </div>
 
-<div class="row">
-<button onclick="cal(1)">1</button>
-<button onclick="cal(2)">2</button>
-<button onclick="cal(3)">3</button>
-<button onclick="cal('-')">-</button>
-</div>
-
-<div class="row">
-<button onclick="cal(0)">0</button>
-<button onclick="cal('.')">.</button>
-<button onclick="cal('=')">=</button>
-<button onclick="cal('+')">+</button>
-</div>
-
-</div>
+<script src="cal.js"></script>
 
 </body>
 </html>

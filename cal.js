@@ -1,64 +1,53 @@
-var input,o,val=0,ans=0,val1=0,ans1=1,input1="i",co='A',e=0;
-function cal(n) {
-    input=n;
-    o=document.getElementById("output");
-    if (!isNaN(input)) {
-        val=val*10+input;   
-    o.value=val;
+let display=document.getElementById("display");
+c=0;
+function append(value){
+    if (!isNaN(value)) {
+       if (c==1) {
+         display.value+=value;
+        op=value*(op/100);
+        c=2;
+        // display.value=op;
+       }
+       else{
+        display.value+=value;
+        op=display.value;
+       }
     }
     else{
-        // val1=val+input;   
-        // o.value=val1;
-        switch (input1) {
-            case '%':
-                ans1=ans1*(val/100);
-                 o.value=ans1;
-                 e=1;
-                break;
-            case '/':
-                ans1 =  ans1/val;
-                o.value=ans1;
-                ans=ans1;
-                e=1;
-                break;
-            case '*':
-                ans1 = val * ans1 ;
-                o.value=ans1;
-                 ans=ans1;
-                e=1;
-                break;
-            case '-':
-                ans = ans - val;
-                o.value=ans;
-                 ans1=ans;
-                 e=2;
-                break;  
-            case '+':
-                ans = val + ans;
-                o.value=ans;
-                 ans1 =ans;
-                 e=2;
-                break;
-            case '=':
-                if (e==2) {
-                    o.value=ans; 
-                }
-               else{
-                 o.value=ans1;
-               }
-        
-            case 'i':
-                ans=val+ans;
-                ans1=val*1;
-                break;
-            default:
-                break;
+        if (value=='%') {
+            c=1;
+            display.value=op+value;
         }
-    input1=input;
-    val=0;
+        else{
+            display.value=op+value;
+        }
+       
     }
-    
+
 }
-function change(c){
-     document.getElementById(c).style.backgroundColor="#337AB7";
+
+function clearDisplay(){
+display.value="0";
+}
+
+function removeLast(){
+let display = document.getElementById("display");
+display.value = display.value.slice(0,-1);
+op=display.value;
+}
+
+function calculate(){
+try{
+    if (c==2) {
+      display.value=eval(op); 
+      op=display.value; 
+    }
+    else{
+      display.value=eval(display.value);
+      op=display.value;
+    }
+}
+catch{
+display.value="Error";
+}
 }
