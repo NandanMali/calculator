@@ -1,5 +1,4 @@
 let display=document.getElementById("display");
-c=0;
 function append(value){
     if (!isNaN(value)) {
         display.value+=value;
@@ -13,6 +12,7 @@ function append(value){
 
 function clearDisplay(){
 display.value="";
+op=display.value; 
 }
 
 function removeLast(){
@@ -22,6 +22,7 @@ op=display.value;
 }
 function percent(){
     display.value=eval(display.value)/100;
+    op=display.value;
 }
 
 function calculate(){
