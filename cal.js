@@ -26,14 +26,8 @@ function percent(){
 
 function calculate(){
 try{
-    if (c==2) {
-      display.value=eval(op); 
-      op=display.value; 
-    }
-    else{
       display.value=eval(display.value);
       op=display.value;
-    }
 }
 catch{
 display.value="Error";
