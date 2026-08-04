@@ -21,7 +21,7 @@ A simple and responsive calculator web application built using HTML, CSS and Jav
 
 📸 Preview
 
-![Calculator Preview] (./calculator-preview.png)
+![Calculator Preview](./calculator-preview.png)
 
 🚀 How to Run
 
